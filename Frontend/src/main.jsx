@@ -21,6 +21,10 @@ import TermsOfServicePage from './JSX/Pages/TermsOfServicePage';
 import PrivacyPolicyPage from './JSX/Pages/PrivacyPolicyPage';
 import HelpCentrePage from './JSX/Pages/HelpCentrePage';
 import ContactUsPage from './JSX/Pages/ContactUsPage';
+import Inbox from './JSX/Components/Inbox';
+import Sent from './JSX/Components/Sent';
+import ComposeMail from './JSX/Components/ComposeMail';
+
 
 // toast
 import { Toaster } from 'react-hot-toast';
@@ -56,6 +60,18 @@ const router = createBrowserRouter([
         path: "resources",
         element: <Resources />,
       },
+       {
+      path: "email/inbox",
+      element: <Inbox />,
+    },
+    {
+      path: "email/sent",
+      element: <Sent />,
+    },
+    {
+      path: "email/compose",
+      element: <ComposeMail />,
+    },
     ],
   },
   {
