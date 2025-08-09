@@ -746,6 +746,7 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "../Context/ThemeContext";
+import Aurora from "../Components/Aurora";
 
 const AnimatedCounter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
@@ -1223,10 +1224,16 @@ export default function LandingPage() {
 
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-          <div className={`absolute inset-0 transition-colors duration-300 ${darkMode
-            ? "bg-gradient-to-br from-indigo-900/30 via-gray-900/20 to-purple-900/30"
-            : "bg-gradient-to-br from-indigo-50/80 via-white/50 to-purple-50/80"
-            }`}></div>
+          <div className={`absolute inset-0 ${darkMode ? "bg-black" : "bg-white"}`}></div>
+
+          <div className="absolute inset-0 pointer-events-none">
+            <Aurora
+              colorStops={["#8A2BE2", "#00FFFF", "#FF69B4"]}
+              blend={1.0}
+              amplitude={1.0}
+              speed={1.0}
+            />
+          </div>
 
           <FloatingIcon icon={Brain} x={10} y={20} delay={0} />
           <FloatingIcon icon={Users} x={90} y={30} delay={0.5} />
