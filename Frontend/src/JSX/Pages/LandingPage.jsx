@@ -1537,8 +1537,12 @@ export default function LandingPage() {
                   <a
                     href="#"
                     className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-gray-900'}`}
+                    aria-label="Follow us on X"
                   >
-                    <Twitter className="w-5 h-5" />
+                    {/* X (Twitter) SVG icon */}
+                    <svg width="20" height="20" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
+                      <path d="M1199.61 0H944.726L600.001 439.196L255.274 0H0L491.372 626.962L0 1226.96H254.274L600.001 787.765L945.726 1226.96H1200L708.628 600.001L1199.61 0ZM872.727 1120.96L600.001 773.765L327.273 1120.96H163.274L600.001 573.765L1036.73 1120.96H872.727ZM1036.73 106.001L600.001 653.196L163.274 106.001H327.273L600.001 453.196L872.727 106.001H1036.73Z" fill="currentColor"/>
+                    </svg>
                   </a>
                   <a
                     href="#"
