@@ -5,6 +5,11 @@ import Footer from './JSX/Components/Footer';
 import Sidebar from './JSX/Components/Sidebar';
 import { useState } from 'react';
 import { useTheme } from './JSX/Context/ThemeContext';
+import BackToTop from "/src/BackToTop.jsx";
+    // <>
+    //   {/* existing layout / routes / pages */}
+    //   <BackToTop />    {/* <-- add this line, inside the existing App return */}
+    // </>
 
 function App() {
   const { darkMode } = useTheme();
@@ -37,6 +42,8 @@ function App() {
           <main className="p-4 pt-24 lg:p-6 lg:pt-28">
             <Outlet />
           </main>
+
+          <BackToTop /> 
 
           <Footer />
         </div>
